@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="changeH1()">Nowy temat </h1>
+
+
+
+    <script>
+        
+        function changeH1(){
+            let h1E = document.querySelector('h1')
+
+            h1E.textContent='coś innego zupełnie'
+            h1E.style.color = 'red'
+        }
+    </script>
+</body>
+</html>
