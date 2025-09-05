@@ -36,3 +36,17 @@ let y=678
 console.log(square(x))
 console.log(square(y))
 console.log(square(x+y))
+
+console.log('-------> zadanie 4')
+// 4. utwórz funkcję, która wypisuje koszt malowania pokoju. Funkcja przyjmuje jako argument powierzchnię pokoju, cenę za metr powierzchni, i koszt farby. Wypisuje koszt w postaci wyrażenia: koszt malowania pokoju o powierzchni powierzchnia wynosi razem  
+// A. koszt to powierzchni*cena + koszt farby
+// B. wykorzystaj funkcję do obliczenia kosztu malowania pokoju 30m farbą w cenie 300zł, przy założeniu ceny 10 za metr
+// C. dodaj do funkcji wartości domyślne: cena za metr to 10, a koszt farby 500. Wykorzystaj funkcję do obliczenia kosztu malowania 20 metrowego pokoju wykorzystując domyślne ceny
+
+function painting(area, priceForM2=10, pricePaint=500){
+    return area*priceForM2+pricePaint
+}
+let cost=painting(30,10,300)
+console.log(`Koszt malowania wynosi ${cost}`)
+
+console.log(`koszt malowania wynosi ${painting(20)}`)

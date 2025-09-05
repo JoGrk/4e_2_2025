@@ -1,6 +1,6 @@
 mysql -u root
-create database biblioteka;
-use biblioteka;
+create database 4e_2_biblioteka;
+use 4e_2_biblioteka;
 show databases;
 create table ksiazka(
     tytul varchar(255),
@@ -14,6 +14,9 @@ values
 ('gra o tron','mucha',99);
 
 select * from ksiazka;
+
+insert into ksiazka
+values('lalka','Boleslaw Prus',50);
 
 insert into ksiazka
 values('lalka','Boleslaw Prus',50);
