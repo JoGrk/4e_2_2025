@@ -51,6 +51,19 @@ calculateDogAge(2)
 // Pass the radius to the function.
 // Calculate the area based on the radius, and output "The area is NN".
  
+const pi = 3.14
+calcCircumfrence(10)
+function calcCircumfrence(radius){
+   console.log(`The circumference is ${2*pi*radius}`)
+}
+
+function calcArea(radius){
+   console.log(`The area is ${pi*radius**2}`)
+}
+
+calcArea(15)
+
+
  
 
 // 5. 
@@ -65,10 +78,28 @@ calculateDogAge(2)
 
 // Now store a fahrenheit temperature into a variable.
 // Convert it to celsius and output "NN°F is NN°C."
+
+
+function celsiusToFahrenheit(celsius){
+   console.log(`${celsius}°C is ${(celsius*9/5)+32}°F`)
+}
+celsiusToFahrenheit(24)
+
+function fahrenheitToCelsius(fahrenheit){
+   console.log(`${fahrenheit}°F is ${(fahrenheit-32)*5/9}°C`)
+}
+fahrenheitToCelsius(77)
  
 
 
 // 6. Function `oppositeNum()` returns the oposite number for the given argument number value.
+
+function oppositeNum(number){
+   return -number
+}
+console.log(`${oppositeNum(241)}`)
+console.log(`${oppositeNum(13)}`)
+console.log(`${oppositeNum(689)}`)
 
 // Write a function named oppositeNum that:
 // takes 1 arguments: number.
