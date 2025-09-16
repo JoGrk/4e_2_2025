@@ -13,17 +13,48 @@ function isLonger(text1, text2){
     }else if(text2.length>text1.length){
         return text2
     }else{
-        return ` `
+        return `oba są równej długości `
     }
 }
  
+console.log(isLonger('oko', 'pies'))
+console.log(isLonger('fabianLabich', 'norwegia'))
+
+
 
 // 3. Utwórz funkcję, która sprawdzi, czy w napisie podanym jej jako parametr jest znak @, a jeśli tak, to wyświetli tekst "małpa została znaleziona na pozycji n" (gdzie n to pozycja) oraz "nie ma małpy" w przeciwnym wypadku
-
+const ifMonkey = (text1)=>{
+    let n=text1.indexOf("@")
+    if(n>-1){
+        console.log(`Małpa została znaleziona na pozycji: ${n}`)
+    }
+    else{
+        console.log(`Nie ma małpy`)
+    }
+}
+ifMonkey(`@niewiem`)
+ifMonkey(`niewiem`)
+ifMonkey(`nie@wiem`)
+ifMonkey(`nie@wiem@`)
  
 
-// 4. Napisz funkcję firstFive, która zwraca pięć pierwszych liter z tekstu, który jej parametrem (użyj substr)
+// 4. Napisz funkcję firstFive, która zwraca pięć pierwszych liter z tekstu, który jej parametrem (użyj substring)
 
-// 5. Napisz funkcję lastFive, która zwraca ostatnie pięć liter z tekstu, który jest jej parametrem (użyj substring)
+function firstFive(text1){
+    console.log(text1.substring(0, 5));
+}
+
+firstFive('JakiesDluzseCos')
+
+// 5. Napisz funkcję lastFive, która zwraca ostatnie pięć liter z tekstu, który jest jej parametrem (użyj slice)
+function lastFive(text1){
+    return text1.slice(-5)
+}
+console.log(lastFive(`AlaMaKotafnfnfnfUUUUU`))
 
 // 6. Zapisz funkcję midFive, która zwraca środkowe pięć znaków z tekstu, który jest jej parametrem (użyj slice)
+function midFive(text1){
+    let n=text1.length/2
+    return text1.slice(n-2,n+3)
+}
+console.log(midFive(`testowydtekst`))
