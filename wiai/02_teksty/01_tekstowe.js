@@ -58,3 +58,22 @@ function midFive(text1){
     return text1.slice(n-2,n+3)
 }
 console.log(midFive(`testowydtekst`))
+
+// 7. Zapisz funkcje toInitial z dwoma parametrami: imię i nazwisko, która zwróci inicjały
+
+function toInitial(firstName, lastName){
+    return firstName.slice(0, 1).toUpperCase()+lastName.slice(0, 1).toUpperCase()
+}
+console.log(toInitial('Fabian', 'Labich'))
+
+// 8. Zapisz funkcję shorten, która skróci tekst będący jej parametrem do długości podanej drugim parametrem i dodatkowo dopisze na końcu ... (trzy kropki)
+
+function shorten(text1,textLenght){
+    return text1.slice(0,textLenght)+`...`
+}
+console.log(shorten(`Wiktor`,5))
+// 9. Zapisz funkcję createLogin z dwoma parametrami: imię i nazwisko, która weźmie pierwszą literę imienia doda kropkę i nazwisko, dodatkowo zmieniając całość na małe litery
+function createLogin(name,surname){
+    return name.slice(0,1).toLowerCase()+`.`+surname.toLowerCase()
+}
+console.log (createLogin('raz','dwa'))
