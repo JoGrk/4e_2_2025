@@ -76,3 +76,4 @@ for(let el of numbers2){
     }
 }
 
+console.dir(numbers1)
