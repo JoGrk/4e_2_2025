@@ -10,7 +10,7 @@ while(a<=20){
 
 // 2. Zmodyfikuj poprzednie zadanie tak, aby była wypisywana co druga liczba (1, 3, 5, itd.)
 
-let a=1
+ a=1
 while(a<=20){
     console.log(a)
     a+=2
