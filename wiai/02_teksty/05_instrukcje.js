@@ -67,10 +67,42 @@ for(i=0;i<5;i++){
 
 // 10.  Wypisz wszystkie elementy tablicy tab1. Użyj klasycznej pętli for
 
+for(i=0 ; i<tabl1.length ; i++){
+    console.log(tabl1[i])
+}
+
 // 11. Wypisz ujemne elementy tablicy tab1. użyj klasycznej pętli for
+
+for(i=0;i<tabl1.length;i++){
+    if(tabl1[i]<0){
+        console.log(tabl1[i])
+    }
+}
 
 // 12. Wypisz parzyste elementy tablicy tab1. Użyj for of..
 
+for(let el of tabl1){
+    if(el%2==0){
+        console.log(el);
+        
+    }
+}
+
 // 13. Wypisz sumę elementów tablicy tab1. Użyj for of....
+let suma=0 
+for(let el of tabl1){
+    suma+=el
+}
+console.log(suma)
+
+
 
 // 14. Wypisz największy element tablicy tab1. Użyj for of....
+let max=tabl1[0]
+for(let el of tabl1){
+    if(el>max){
+        max=el
+    }
+}
+console.log(max)
+
