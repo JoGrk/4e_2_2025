@@ -84,5 +84,56 @@ SELECT*
 FROM Pracownicy
 WHERE miejscowosc='Nowa Wies';
 
-SELECT distinct miejscowosc
+SELECT DISTINCT miejscowosc
 FROM Pracownicy;
+
+-- C. Wypisz imiona i nazwiska pracowników posortowane według nazwisk (ORDER BY)
+
+SELECT DISTINCT imie, nazwisko
+FROM Pracownicy
+ORDER BY nazwisko;
+
+-- 1. Każda porządna tabela powinna posiadać klucz, dodaj pole jeśli trzeba. 
+ALTER TABLE Pracownicy
+ADD primary key(id_pracownika,jezyk);
+
+
+-- 2. Jan Malinowski poznał nowy język (CSS) - dopisz do tabeli.
+
+INSERT INTO Pracownicy
+(id_pracownika,jezyk)
+VALUES
+(3,'CSS');
+
+
+-- 3. Antoni Malinowski poznał nowy język - JavaScript i zmienił adres na Naklo nad Notecia, Staszica 1 - dopisz nowy wiersz do tabeli
+
+INSERT INTO Pracownicy
+VALUES
+(2,'Antoni','Malinowski','JavaScript','Naklo Nad Notecia','Staszica', '1');
+
+-- 4. Wyświetl imię i nazwisko pracowników znających język CSS
+
+SELECT imie,nazwisko
+FROM Pracownicy
+WHERE jezyk='CSS';
+
+-- 5. Gdzie mieszka Antoni Malinowski? Wypisz imię, nazwisko, ulicę, miejscowość
+SELECT DISTINCT imie, nazwisko, adres, miejscowosc
+FROM Pracownicy
+WHERE imie='Antoni' and nazwisko='Malinowski';
+-- 6. Usuwamy informację o znajomości PHP (bo tak)
+
+DELETE FROM Pracownicy
+WHERE jezyk = 'PHP';
+
+-- 7. Sprawdź adres Jana Kowalskiego
+SELECT DISTINCT miejscowosc,adres
+FROM Pracownicy
+WHERE imie='Jan' AND nazwisko='Kowalski';
+-- 8. Zatrudniliśmy nowego pracownika, wpisz jego dane: Aleksander Nowowiejski, mieszka w Nowej Wsi, ulica Pogodna 16
+INSERT INTO Pracownicy
+VALUES
+(5, 'Aleksander', 'Nowowiejski', null, 'Nowa Wies', 'ulica Pogodna', '16');
+-- 9. Popraw strukturę tabeli tak, aby nie było tych problemów (redundacja, anomalia wstawiania, aktualizacji, usuwania)
+
