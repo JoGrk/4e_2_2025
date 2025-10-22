@@ -53,6 +53,7 @@ ORDER BY imie_nazwisko;
 DROP TABLE Pracownicy;
 
 CREATE TABLE Pracownicy(
+    id_pracownika int,
     imie varchar(255),
     nazwisko varchar(255),
     jezyk varchar(255),
@@ -62,18 +63,18 @@ CREATE TABLE Pracownicy(
 );
 
 INSERT INTO Pracownicy
-(imie,nazwisko,jezyk,adres,numer_domu,miejscowosc)
+(id_pracownika, imie,nazwisko,jezyk,adres,numer_domu,miejscowosc)
     VALUES
 
-('Jan', 'Kowalski', 'PHP', 'os. Wł. Łokietka', '3/4', 'Naklo nad Notecia'),
-('Antoni', 'Malinowski', 'HTML' , '','1', 'Chrzastowo'),
-('Antoni', 'Malinowski', 'CSS' , '','1', 'Chrzastowo'),
-('Antoni', 'Malinowski', 'PHP' , '','1', 'Chrzastowo'),
-('Jan', 'Malinowski','HTML','ul. Ogrodowa', '2', 'Nowa Wies Wielka'),
-('Jan', 'Malinowski','Java','ul. Ogrodowa', '2', 'Nowa Wies Wielka'),
-('Andrzej', 'Ziemianski', 'HTML','ul. Sowia', '5', 'Nowa Wies'),
-('Andrzej', 'Ziemianski', 'CSS','ul. Sowia', '5', 'Nowa Wies'),
-('Andrzej', 'Ziemianski', 'JavaScript','ul. Sowia', '5', 'Nowa Wies');
+(1,'Jan', 'Kowalski', 'PHP', 'os. Wł. Łokietka', '3/4', 'Naklo nad Notecia'),
+(2, 'Antoni', 'Malinowski', 'HTML' , '','1', 'Chrzastowo'),
+(2, 'Antoni', 'Malinowski', 'CSS' , '','1', 'Chrzastowo'),
+(2, 'Antoni', 'Malinowski', 'PHP' , '','1', 'Chrzastowo'),
+(3, 'Jan', 'Malinowski','HTML','ul. Ogrodowa', '2', 'Nowa Wies Wielka'),
+(3, 'Jan', 'Malinowski','Java','ul. Ogrodowa', '2', 'Nowa Wies Wielka'),
+(4, 'Andrzej', 'Ziemianski', 'HTML','ul. Sowia', '5', 'Nowa Wies'),
+(4,'Andrzej', 'Ziemianski', 'CSS','ul. Sowia', '5', 'Nowa Wies'),
+(4, 'Andrzej', 'Ziemianski', 'JavaScript','ul. Sowia', '5', 'Nowa Wies');
 
 SELECT*
 FROM Pracownicy
