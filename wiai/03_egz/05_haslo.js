@@ -12,16 +12,15 @@ btnPassE.addEventListener('click',(e)=>{
         resultE.textContent='Haslo jest dobre'
         resultE.style.color='green'
     }
-    else if(password.length<4){
-        resultE.textContent='Haslo jest słabe'
-        resultE.style.color='yellow'
-    }
-    else{
-        resultE.textContent='Średnie'
+    else if(password.length>=4 && password.length<7 && isDigital(password)){
+        resultE.textContent='Haslo jest średnie'
         resultE.style.color='blue'
     }
-    
-    console.log(password);
+    else{
+        resultE.textContent='Słabe'
+        resultE.style.color='yellow'
+    }
+   
 
 })
 
