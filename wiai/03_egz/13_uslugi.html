@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./13_uslugi.js" defer></script>
+</head>
+<body>
+    <form action="">
+    <table>
+        <tr>
+            <td>
+                <label for="name">Imię:</label>
+            </td>
+            <td>
+                <input type="text" name="name" id="name">
+            </td>
+        </tr>
+                <tr>
+            <td>
+                <label for="surname">Nazwisko</label>
+            </td>
+            <td>
+                <input type="text" name="surname" id="surname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="service">Usługa:</label>
+            </td>
+            <td>
+                <textarea name="service" id="service"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" name="terms" id="terms">
+                <label for="terms">Zapoznałem się z regulaminem</label>
+            </td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>
+            <button type="reset" id="btn">Resetuj</button>
+            <button id="btn2">Prześlij</button>
+        </td>
+        
+        </tr>
+    </table>
+    </form>
+    <p id="result"></p>
+</body>
+</html>
