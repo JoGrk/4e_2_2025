@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./14_kontakt.js" defer></script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Imię:</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <label for="surname">Nazwisko:</label>
+                </td>
+                <td>
+                    <input type="text" name="surname" id="surname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mail">E-mail:</label>
+                </td>
+                <td>
+                    <input type="email" name="mail" id="mail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="service">Usługa</label>
+                </td>
+                <td>
+                    <select name="service" id="service">
+                        <option>naprawa komputera</option>
+                        <option>odzyskiwanie danych</option>
+                        <option>problemy z oprogramowaniem</option>
+                        <option>konfiguracja sieci LAN</option>
+                        <option>inne</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="copy" id="copy" checked>
+                    <label for="copy">Wyślij kopie wiadomości</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="reset">Resetuj</button>
+                    <button id="send">Prześlij</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p id="result"></p>
+</body>
+</html>
