@@ -1,0 +1,14 @@
+.size{
+    width: 2rem;
+    height: 2rem;
+    margin: 5px;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}

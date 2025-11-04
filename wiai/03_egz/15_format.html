@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./15_format.js" defer></script>
+    <link rel="stylesheet" href="./15_format.css">
+</head>
+<body>
+        <label for="percent">Podaj rozmiar tekstu w procentach:</label> <br>
+        <input type="number" name="percent" id="percent">%
+
+        <p>
+            <select name="textstyle" id="textstyle">
+                <option value="normal">prosty</option>
+                <option value="italic">pochylony</option>
+            </select>
+        </p>
+        <p>Jakim kolorem sformatować tekst? Wybierz przycisk.</p>
+        <p>
+           <button id="btn-red" class="size red"></button>
+            <button id="btn-green" class="size green"></button>
+            <button id="btn-blue" class="size blue"></button> 
+        </p>
+        
+        
+        <p id="result">To jest przykład paragrafu, który może być dowolnie formatowany</p>
+</body>
+</html>
