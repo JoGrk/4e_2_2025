@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./18_zakupy.js" defer></script>
+</head>
+<body>
+    <h1>Przybliżona cena usługi</h1>
+    <form>
+        <label for="m2">Metraż:</label>
+        <input type="number" name="m2" id="m2">
+        <select name="size" id="size"> 
+            <option value="90">standardowe</option>
+            <option value="120">mozaika</option>
+            <option value="145">wielkoformatowe</option>
+        </select><br>
+
+        <input type="radio" name="work" id="tiles" value="1">
+        <label for="tiles">Kafle</label><br>
+        <input type="radio" name="work" id="remove" value="1.1">
+        <label for="remove">Ze skuwaniem</label><br>
+        <input type="radio" name="work" id="stairs" value="1.2">
+        <label for="stairs">Schody</label><br>
+
+        <input type="checked" name="discount" id="discount">
+        <label for="discount">Rabat</label><br>
+
+        <button>Oceń usługę</button>
+    </form>
+
+    <H3 id="result"></H3>
+    
+</body>
+</html>
