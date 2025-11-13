@@ -72,5 +72,7 @@ SELECT COUNT(*)
 FROM zamowienia
 WHERE DATA ='2012-08-17';
 -- 14. tabela sprzedawcy: ilu jest sprzedawców, dla których podane jest miasto? (WHERE, not null, bez group by)
-
+SELECT COUNT(*)
+FROM sprzedawcy
+WHERE miasto IS NOT NULL;
 -- 15.tabela zamówienia: policz ile było zamówień dokonanych w poszczególnych dniach (pogrupuj według daty, policz idzamówienia)
