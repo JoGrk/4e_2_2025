@@ -21,15 +21,15 @@ formE.addEventListener('submit',e=>{
 
    if(redE.selected){
     pE.style.color='red'
-    pE.style.backgroundColor='light-red'
+    pE.style.backgroundColor='lightred'
    }
    else if(blueE.selected){
     pE.style.color='blue'
-    pE.style.backgroundColor='light-blue'
+    pE.style.backgroundColor='lightblue'
    }
    else if(greenE.selected){
     pE.style.color='green'
-    pE.style.backgroundColor='light-green'
+    pE.style.backgroundColor='lightgreen'
    }
 })
 
