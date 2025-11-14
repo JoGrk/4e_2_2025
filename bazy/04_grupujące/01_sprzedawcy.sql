@@ -75,4 +75,4 @@ WHERE DATA ='2012-08-17';
 SELECT COUNT(*)
 FROM sprzedawcy
 WHERE miasto IS NOT NULL;
--- 15.tabela zamówienia: policz ile było zamówień dokonanych w poszczególnych dniach (pogrupuj według daty, policz idzamówienia)
+-- 15.tabela zamówienia: policz ile było zamówień dokonanych w poszczególnych dniach (pogrupuj według daty, policz idzamówienia)use 4e_2_gorup
