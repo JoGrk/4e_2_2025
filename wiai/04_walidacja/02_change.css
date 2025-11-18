@@ -1,0 +1,17 @@
+.orange{
+    background-color: rgb(255, 238, 207);
+    color: rgb(198, 129, 2);
+    border-color: rgb(198, 129, 2);
+}
+
+.red{
+    background-color: rgb(251, 172, 172);
+    color: rgb(195, 1, 1);
+    border-color: rgb(195, 1, 1);
+}
+
+.grey{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-color: black;
+}
