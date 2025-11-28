@@ -31,7 +31,7 @@ emailE.addEventListener('input',e=>{
     }
 })
 postalcodeE.addEventListener('input',e=>{
-    const ahh = /^[0-9]{2}-[0-9]{3}/
+    const ahh = /^[0-9]{2}-[0-9]{3}$/
     if (ahh.test(postalcodeE.value)){
         postalcodeErrorE.textContent=''
     }

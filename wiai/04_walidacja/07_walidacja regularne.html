@@ -13,7 +13,7 @@
         <label for="email">e-mail</label>
         <input type="email" name="email" id="email"><span id="email-error"></span><br>
         <label for="postal-code">kod pocztowy</label>
-        <input type="text" name="postal-code" id="postal-code"><span id="postal-error"></span><br>
+        <input type="text" name="postal-code" id="postal-code" pattern="^[0-9]{2}-[0-9]{3}$" title="adres dwie cyfry- trzy cyfry"<span id="postal-error"></span><br>
         <label for="address">adres</label>
         <input type="text" name="address" id="address"><span id="address-error"></span><br>
         <button>wyslij</button>
