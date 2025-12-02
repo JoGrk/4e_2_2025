@@ -1,0 +1,35 @@
+
+main{
+    display:flex;
+}
+
+nav{
+    width: 40%;
+}
+nav section{
+    height: 15vh;
+    padding-top: 3rem;
+}
+nav section:last-child{
+    height: 50vh;
+}
+
+
+
+aside{
+    width: 60%;
+}
+
+aside section{
+    height: 40vh;
+}
+
+aside img{
+    width: 100%;
+    color: hsl(0, 80, 50);
+}
+
+header, footer{
+ height: 10vh;
+ background-color: lightgrey;
+}
