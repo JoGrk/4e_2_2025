@@ -50,6 +50,7 @@ $titles=$result->fetch_all(1);
     ?>
     </ul>
 
+
 </body>
 </html>
 

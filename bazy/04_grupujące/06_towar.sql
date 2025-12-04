@@ -91,10 +91,28 @@ GROUP BY RODZAJ
 HAVING ilosc_rekordow < 15;
 
 -- dla każdego rodzaju towarów wyświetl maksymalną cenę dla ilości rekordów w RODZAJU większe od 10. Uwzględnij tylko towary zamówione.
-
+SELECT MAX(cena), rodzaj
+FROM towar
+WHERE zamow = 'prawda'
+GROUP BY rodzaj
+HAVING COUNT(rodzaj)>10;
 
 -- Oblicz minimalną cenę towarów niezamówionych dla każdego rodzaju. 
 
+SELECT rodzaj, MIN(cena)
+FROM towar
+WHERE zamow != 'prawda'
+GROUP BY rodzaj;
+
 -- oblicz średnią cenę towarów zamówionych (zamow) i nie zamówionych
 
+SELECT ROUND(AVG(cena)) as srednia_cena, zamow
+FROM towar
+GROUP BY zamow;
+
+
 -- oblicz średnią cenę towarów wyprodukowanych w 1999 roku  dla poszczególnych rodzajów towaru
+SELECT rodzaj,ROUND(AVG(cena)) as srednia_cena
+FROM towar
+WHERE data_prod LIKE '1999%'
+GROUP BY rodzaj;
