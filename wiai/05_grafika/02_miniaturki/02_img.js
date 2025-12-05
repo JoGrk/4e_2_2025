@@ -16,6 +16,6 @@ allE.forEach(imgE=>{
 let arrayImg = ["jeden.jpg", "dwa.jpg", "trzy.jpg", "cztery.jpg", "pięć.jpg", "sześć.jpg"]
 
 mainE.addEventListener('click', e=>{
-    let number = floor(Math.random()*6)
+    let number = Math.floor(Math.random()*arrayImg.length)
     mainE.src = arrayImg[number]
 })
