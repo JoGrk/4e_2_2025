@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 30vh;
+    background-color: rgb(225, 183, 154);
+    padding: 2rem;
+}
+
+nav img{
+    width: 100px;
+    margin: 1rem;
+}
+
+main{
+    height: 70vh;
+    padding: 2rem;
+    background-color: rgb(217, 134, 134);
+}
