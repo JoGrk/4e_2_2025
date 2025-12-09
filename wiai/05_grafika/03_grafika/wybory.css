@@ -35,3 +35,7 @@ aside img{
     border: 1px black solid;
     box-shadow: 10px 10px 20px rgba(0, 50, 200, 0.5);
 }
+
+.dish{
+    display:none
+}
