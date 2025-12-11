@@ -1,3 +1,4 @@
+USE 4e_2_szkolenia
 -- − Zapytanie 1: wybierające jedynie kod, nazwę i cenę kursów posortowane rosnąco według ceny
 
 SELECT kod, nazwa, Cena
@@ -11,7 +12,19 @@ FROM kursy_uczestnicy
     INNER JOIN uczestnicy ON kursy_uczestnicy.id_uczestnika = uczestnicy.id_uczestnika;
 
 -- − Zapytanie 3: wybierające jedynie nazwy wszystkich kursów z tabeli kursy oraz odpowiadające im daty z tabeli kursy_uczestnicy.  Uporządkuj rosnąco według nazwy kursu. Należy posłużyć się relacją.
+SELECT nazwa, data
+FROM kursy
+    INNER JOIN kursy_uczestnicy ON kursy.kod=kursy_uczestnicy.kod_kursu
+ORDER BY nazwa;
 
 -- − Zapytanie 4: tworzące zestawienie, na którym widoczne są nazwy wszystkich kursów oraz liczby osób zapisanych na te kursy. Nazwa kolumny z liczbą osób (alias): „Zapisanych”
+SELECT nazwa, COUNT(id_uczestnika) as "zapisanych"
+FROM kursy 
+    INNER JOIN kursy_uczestnicy ON kursy.kod=kursy_uczestnicy.kod_kursu
+GROUP BY nazwa;
 
 -- − Zapytanie 5 : wybierające imiona i nazwiska uczestników z tabeli uczestnicy, daty z tabeli kursy_uczestnicy oraz nazwy kursów z tabeli kursy. Należy posłużyć się relacją.
+SELECT imie, nazwisko, data, nazwa
+FROM kursy
+    INNER JOIN kursy_uczestnicy ON kursy.kod = kursy_uczestnicy.kod_kursu
+    INNER JOIN uczestnicy ON kursy_uczestnicy.id_uczestnika = uczestnicy.id_uczestnika;
