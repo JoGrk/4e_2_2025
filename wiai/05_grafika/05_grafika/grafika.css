@@ -52,7 +52,7 @@ nav img:last-child{
     grid-area: left;
     background-color: rgb(188, 255, 255);
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content:start;
     align-items:center;
     gap: 1rem;
@@ -65,7 +65,7 @@ nav img:last-child{
     grid-area: right;
     background-color: rgba(253, 147, 105, 0.501);
     display: flex;
-        flex-direction: column;
+    flex-direction: column-reverse;
     justify-content:end ;
     align-items:center;
     gap: 1rem;
@@ -82,11 +82,11 @@ button{
 .left img, .right img{
     filter: grayscale(100);  
 }
-/* 
-.left img:first-child{
+
+.left img:last-child{
     margin-top: 1rem;
 }
 
-.right img:last-child{
+.right img:first-child{
     margin-bottom: 1rem;
-} */
+}
