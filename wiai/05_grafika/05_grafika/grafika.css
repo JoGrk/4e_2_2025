@@ -39,7 +39,7 @@ nav{
     
 }
 
-nav img{
+nav img, .left img, .right img{
     width: 80px;
     height: 80px;
 }
@@ -51,12 +51,25 @@ nav img:last-child{
 .left{
     grid-area: left;
     background-color: rgb(188, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items:center;
+    gap: 1rem;
+    
+
 }
 
 
 .right{
     grid-area: right;
     background-color: rgba(253, 147, 105, 0.501);
+    display: flex;
+        flex-direction: column;
+    justify-content:end ;
+    align-items:center;
+    gap: 1rem;
+    
 }
 
 button{
@@ -66,8 +79,14 @@ button{
     
 }
 
-.left, .right{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.left img, .right img{
+    filter: grayscale(100);  
 }
+/* 
+.left img:first-child{
+    margin-top: 1rem;
+}
+
+.right img:last-child{
+    margin-bottom: 1rem;
+} */
