@@ -1,0 +1,30 @@
+
+Proszę utworzyć katalog podpisany imieniem i nazwiskiem. W visual Studio Code wybrać ten katalog. Każde zadanie to osobne pliki html. js i ewentualnie css. W każdym pliku html należy dołączyć nagłówek pierwszego poziomu z imieniem i nazwiskiem. Z wykonania każdego pliku (wystarczy jeden na zadanie, najlepiej z jakimś efektem działania) proszę wykonać pełnoekranowy zrzut. Oddajecie katalog z wszystkimi plikami (także obrazkami) oraz wykonanymi zrzutami.
+
+1.
+    A. Pole tekstowe numeryczne z etykietą wielkość czcionki w % (za polem znak %), ograniczone dla wielkości od 50 do 200, ze zmianą co 10, domyślnie 100
+    B. Paragraf z tekstem Lorem... i przycisk
+    C. Po kliknięciu na przycisk paragraf jest formatowany wybraną wielkością czcionki
+
+2.
+    A. pole tekstowe z etykietą "wpisz login", z miejscem na tekst obok pola 
+    B. w trakcie pisania sprawdzany jest login,
+        - jeśli zawiera znaki inne niż cyfra, litera i znak podkreślenia, wyświetlana jest obok informacja o błędzie,
+        - w przeciwnym wypadku jest usuwany napis o błędzie
+
+3.
+    A. pole wyboru Pokaż element
+    B. Dowolny obrazek 
+    C. Po zmianie wartości pola wyboru (lub ewentualnie po kliknięciu) obrazek jest pokazywany na stronie lub chowany (nie zajmując miejsca) w zależności o wartości pola wyboru
+
+4.
+    A. strona składa z nagłówka i części głównej strony
+        - podział poziomo, nagłówek ma wysokość 200px 
+        - część główna wyróżniona kolorem tła
+        - w nagłówku 8 obrazów, ułożone w sposób wyśrodkowany (pionowo i poziomo), 
+        - wysokość i szerokość obrazów nagłówka to 100px
+    B. utworzona klasa border, dodająca obramowanie w kolorze pomarańczowym oraz cień bloku (dowolny)
+    C. po kliknięciu na jeden z 8 obrazków nagłówka jest dodawana do niego klasa border
+    D. Po ponownym kliknięciu jest usuwana klasa border
+
+    E. wersja wyżej punktowana zadania wymaga przechwycenia wszystkich obrazów z części nav do jednej zmiennej, a następnie sprawdzenie zdarzenia kliknięcia z wykorzystaniem pętli (np. forEach)

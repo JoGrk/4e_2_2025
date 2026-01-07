@@ -1,0 +1,28 @@
+
+Proszę utworzyć katalog podpisany imieniem i nazwiskiem. W visual Studio Code wybrać ten katalog. Każde zadanie to osobne pliki html. js i ewentualnie css. W każdym pliku html należy dołączyć nagłówek pierwszego poziomu z imieniem i nazwiskiem. Z wykonania każdego pliku (wystarczy jeden na zadanie, najlepiej z jakimś efektem działania) proszę wykonać pełnoekranowy zrzut. Oddajecie katalog z wszystkimi plikami (także obrazkami) oraz wykonanymi zrzutami.
+
+1.
+    A. grupa opcji z kolorami: niebieski, pomarańczowy, fioletowy
+    B. Paragraf z tekstem Lorem... i przycisk
+    C. Po kliknięciu na przycisk wybrany kolor jest stosowany do tekstu i tła paragrafu. 
+
+2.
+    A. pole wyboru z klasą emp
+    B. klasa emp: tekst pochylony, kolor fioletowy
+    C. po zmianie wartości w polu wyboru dodawana jest klasa emp lub usuwana (pole zaznaczone - klasa dodawana, pole niezaznaczone- usuwana) 
+
+3.
+    A. Formularz z polem tekstowym do wpisania kodu pocztowego, , z miejscem na tekst obok pola, przycisk wyślij, poniżej formularza paragraf na wynik
+    B po wysłaniu formularza sprawdzana jest wartość pola tekstowego:
+        - jeśli pasuje do wzorca kodu pocztowego (dwie cyfry, myślnik, trzy cyfry), to poniżej formularza jest wyświetlana informacja "dziękujemy za podanie danych". nie ma komunikatu o błędzie
+        - w przeciwnym wypadku obok pola tekstowego wyświetlony komunikat "wpisz poprawny kod pocztowy", brak tekstu pod formularzem.
+
+4.
+    A. strona składa się z bloku nawigacji i części głównej.
+        - podział pionowo. Nawigacja szerokość 20% i jest wyróżniona kolorem tła (dowolnym)
+        - w sekcji nawigacji 6 obrazów, ułożone w sposób wyśrodkowany (pionowo i poziomo), 
+        - wysokość i szerokość obrazów sekcji nawigacji to 80px
+        - w bloku głównym startowo wyświetlony pierwszy obraz
+    B.  obraz kliknięty w sekcji nav jest wyświetlony jako główny (obraz główny jest jeden)
+
+    C. wersja wyżej punktowana zadania wymaga przechwycenia wszystkich obrazów z części nav do jednej zmiennej, a następnie sprawdzenie zdarzenia kliknięcia z wykorzystaniem pętli (np. forEach)
