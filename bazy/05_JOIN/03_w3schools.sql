@@ -32,7 +32,19 @@ FROM products
 
 
 -- 7. Wyświetl nazwy towarów, nazwy kategorii, daty zamówień i nazwę firmy klienta
- 
+SELECT ProductName, CategoryName, OrderDate, CustomerName
+FROM Products
+    INNER JOIN categories USING(CategoryID)
+    INNER JOIN order_details USING(ProductID)
+    INNER JOIN orders USING(OrderID)
+    INNER JOIN customers USING(CustomerID);
+
 -- 8. Ile razy był zamawiany dany produkt? (podaj nazwy produktów)
+
+SELECT ProductName, COUNT(*)
+FROM products
+    INNER JOIN order_details USING(ProductID)
+GROUP BY ProductName;
+
  
 -- 9. Wyświetl nazwy firm klientów, daty zamówień i nazwy towarów
