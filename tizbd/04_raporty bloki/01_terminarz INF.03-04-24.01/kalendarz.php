@@ -1,5 +1,21 @@
 <?php
-    // $link -> new mysqli('localhost', 'root', '', '');
+    $link = new mysqli('localhost', 'root', '', '4e_2_terminarz');
+    $sql = "
+    SELECT DISTINCT wpis
+    FROM zadania 
+    WHERE 
+        dataZadania BETWEEN '2020-07-01' AND '2020-07-07'   
+        AND wpis != ''";
+    $result = $link -> query($sql);
+    $tasks = $result -> fetch_all(1);
+
+    $sql = "
+    SELECT dataZadania,wpis
+    FROM zadania
+    WHERE miesiac = 'lipiec';";
+
+    $result = $link -> query($sql);
+    $tasks2 = $result -> fetch_all(1);
 ?>
 
 <!DOCTYPE html>
@@ -19,16 +35,35 @@
         <div class="title">
             <h1>Terminarz</h1>
             <p>
-                najbliższe zadania:
+                <!-- najbliższe zadania: -->
+                 <?php
+                    foreach($tasks as $task){
+                        echo"{$task['wpis']}; ";
+                    }
+                        
+                 ?>
             </p>
 
         </div>
     </header>
 
     <main>
-        <p></p>
+    <!-- <section class='.callendar'>
+         <h6>[dataZadania]</h6>
+        <p>[wpis]</p>
+    </section> --> 
+    <?php
+        foreach($tasks2 as $task){
+            echo"
+                 <section class='callendar'>
+                    <h6> {$task['dataZadania']}</h6>
+                    <p>{$task['wpis']}</p>
+                </section>
+            ";
+        }
+    ?>
     </main>
-    <!-- <div class="main"></div> -->
+    
 
     <footer>
         <a href="./sierpien.html">Terminarz na sierpień</a>
@@ -39,5 +74,5 @@
 </html>
 
 <?php
-    // $link -> close();
+    $link -> close();
 ?>

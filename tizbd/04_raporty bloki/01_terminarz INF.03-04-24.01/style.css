@@ -14,7 +14,7 @@ body{
 /* – Dodatkowo szerokość pierwszego bloku banera wynosi 30%, drugiego 70% \ */
 .img{
     width: 30%;
-    float: left;
+   
 }
 
 img{
@@ -22,10 +22,17 @@ img{
 }
 
 .title{
-    float: left;
+    
     width: 70%;
 }
+header {
+    display: flex;
+}
 
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* – Dla bloku kalendarza: kolor tła #9FA8DA, szerokość 160 px, wysokość 85 px, marginesy zewnętrzne 5 px, obramowanie linią ciągłą o szerokości 1 px i kolorze #6F79A8; tekst, który nie mieści się w bloku jest ukryty i wyświetlany bez paska przewijania (np. obraz 2, pierwszy blok kalendarza)  – Gdy kursor znajdzie się na bloku kalendarza jego kolor tła zmienia się na #6F79A8, a kolor czcionki na biały */
 
@@ -33,7 +40,7 @@ img{
     background-color: #9FA8DA;
     width: 160px;
     height: 85px;
-    padding: 5px;
+    margin: 5px;
     border: 1px solid #6F79A8;
     clear: both;
 }
