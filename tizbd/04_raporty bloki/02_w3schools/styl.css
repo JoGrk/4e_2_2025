@@ -1,0 +1,13 @@
+section{
+    height: 50vh;
+    overflow: auto;
+}
+
+.customer{
+    height: 8rem;
+    width: 10rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: antiquewhite;
+    display: inline-block;
+}
