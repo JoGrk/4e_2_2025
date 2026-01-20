@@ -2,6 +2,7 @@ const imagesArray = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg',
 const ulE = document.querySelector('ul')
 const randomE = document.querySelector('#random')
 const deleteE = document.getElementById('delete')
+const mainE = document.querySelector('main')
 
 imagesArray.forEach(element =>{
     let liE = document.createElement('li')
@@ -15,13 +16,18 @@ randomE.addEventListener('click', e=>{
     // console.log(randomIndex)
     let sectionE=document.createElement('section')
     sectionE.classList.add('images')
+
     let h3E=document.createElement('h3')
     h3E.textContent=`${randomIndex}`
+
     let imgE=document.createElement('img')
     imgE.src=imagesArray[randomIndex]
+    imgE.title = imagesArray[randomIndex]
+    imgE.alt = randomIndex
+
     sectionE.appendChild(h3E)
     sectionE.appendChild(imgE)
-    document.querySelector('main').appendChild(sectionE)
+    mainE.appendChild(sectionE)
 })
 
 function drawRandom(max){
@@ -29,8 +35,13 @@ function drawRandom(max){
     return Math.floor(draw)
 }
 
-// if(docume.hasChildNodes()){
-//     deleteE.addEventListener('click', e=>{
-//         document.querySelector('main').removeChild(document.querySelector('main')[0])
-//     })
-// }
+
+
+deleteE.addEventListener('click', e=>{
+    // let imgFirstE = document.querySelector('main section:first-child')
+    let imgFirstE = mainE.firstChild;
+    if (imgFirstE){
+           imgFirstE.remove()
+    }
+ 
+})

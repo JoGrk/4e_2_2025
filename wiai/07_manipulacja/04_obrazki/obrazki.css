@@ -9,6 +9,11 @@ body{
 nav{
     background-color: aqua;
     grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+    padding-left: 2rem;
 }
 
 aside{
@@ -32,3 +37,12 @@ main{
 section.images img{
     width: 100px;
 }
+
+button {
+    padding: 1.5rem 1rem;
+    width: 5rem;
+    text-align: center;
+    background-color: rgb(167, 243, 243);
+    border: 2px solid rgb(27, 89, 89);
+}
+
