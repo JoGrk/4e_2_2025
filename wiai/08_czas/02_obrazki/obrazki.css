@@ -1,0 +1,38 @@
+body{
+    display: grid;
+    grid-template-areas:    'nav header header'
+                            'main main aside'
+                            'footer footer aside';
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 20vh 55vh 25vh;
+    box-sizing: border-box;
+
+}
+
+nav{
+    background-color: aqua;
+    grid-area: nav;
+
+}
+main{
+    background-color: rgb(0, 188, 188);
+    grid-area: main;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    background-color: rgb(152, 251, 251);
+    grid-area: header;
+    color: rgb(255, 162, 0);
+}
+footer{
+    background-color: rgb(198, 255, 255);
+    grid-area: footer;
+}
+
+aside{
+    background-color: rgb(0, 238, 255);
+    grid-area: aside;
+}
