@@ -1,4 +1,4 @@
-const imagesArray = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg',]
+const imagesArray = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg']
 const ulE = document.querySelector('ul')
 const randomE = document.querySelector('#random')
 const deleteE = document.getElementById('delete')

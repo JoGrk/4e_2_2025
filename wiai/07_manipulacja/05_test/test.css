@@ -1,0 +1,53 @@
+body{
+    display: grid;
+    grid-template-areas:    'nav header aside'
+                            'nav main aside';
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25vh 75vh;
+    box-sizing: border-box;
+    
+}
+
+main{
+    background-color: rgb(163, 163, 227);
+    grid-area: main;
+}
+
+nav{
+    background-color: rgb(162, 162, 255);
+    grid-area: nav;
+}
+
+aside{
+    background-color: rgb(224, 224, 246);
+    grid-area: aside;
+}
+
+header{
+    background-color:rgb(78, 78, 255) ;
+    grid-area: header;
+}
+
+nav, header, main ,aside{
+    padding: 2rem;
+}
+
+.task{
+    background-color: white;
+    border: 2px solid blue;
+    height: 8rem;
+    width: 25rem;
+    display: inline-block;
+    margin: 10px;
+}
+
+.image{
+    width: 80px;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}
