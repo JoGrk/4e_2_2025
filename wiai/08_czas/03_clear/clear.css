@@ -1,0 +1,45 @@
+body{
+    display: grid;
+    grid-template-areas: 'nav header aside'
+                         'main main aside';
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25vh 75vh;
+}
+nav{
+    background-color: rgb(244, 192, 244);
+    grid-area: nav;
+}
+main{
+    background-color: rgb(233, 191, 233);
+    grid-area: main;
+}
+aside{
+    background-color: rgb(242, 121, 242);
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: top;
+}
+header{
+    background-color: rgb(188, 153, 220);
+    grid-area: header;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section{
+    display: none;
+}
+
+aside img{
+    height: 80px;
+    width: 80px;
+}
+
