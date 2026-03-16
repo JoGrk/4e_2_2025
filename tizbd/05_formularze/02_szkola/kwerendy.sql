@@ -6,3 +6,7 @@ WHERE id=10;
 
 DELETE FROM uczen
 WHERE id=26;
+
+SELECT *
+FROM uczen
+WHERE id=10;

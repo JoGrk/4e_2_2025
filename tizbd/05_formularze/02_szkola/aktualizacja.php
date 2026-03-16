@@ -22,3 +22,7 @@ $result = $link -> query($sql);
     
 </body>
 </html>
+
+<?php
+$link -> close();
+?>
