@@ -12,12 +12,35 @@ if($firstname_f && $lastname_f){
     $result=$link->query($sql);
 
 }
+$remove_f=$_POST['remove_f']??null;
+if($remove_f){
+    $sql = "DELETE FROM ksiazki
+            WHERE id = $remove_f;";
+    $result = $link -> query($sql);
+}
+
 
 $sql = "SELECT ksiazki.id,tytul,imie,nazwisko
         FROM ksiazki
         INNER JOIN autorzy ON ksiazki.id_autor = autorzy.id;";
 $result = $link -> query($sql);
 $books =$result -> fetch_all(1);
+
+$return_id_f = $_POST['return_id_f']??NULL;
+if($return_id_f){
+    $sql = "UPDATE wypozyczenia
+            SET data_oddania = CURRENT_DATE
+            WHERE id = $return_id_f;";
+    $result = $link ->query($sql);
+}
+
+$sql = "SELECT wypozyczenia.id,tytul,nazwisko, data_oddania
+        FROM wypozyczenia
+            INNER JOIN ksiazki ON wypozyczenia.id_ksiazka = ksiazki.id
+            INNER JOIN czytelnicy ON wypozyczenia.id_czytelnik = czytelnicy.id;";
+$result = $link -> query($sql);
+$borrows = $result -> fetch_all(1); 
+
 
 ?>
 
@@ -41,10 +64,20 @@ $books =$result -> fetch_all(1);
     <h2>Książki</h2>
     <ul>
         <!-- skrypt b -->
-      
+      <!-- <li>
+        <strong>[id]</strong>
+        [tytul]
+        [imie]
+        [nazwisko]
+    </li> -->
          <?php
             foreach($books as $book){
-                echo""
+                echo"  <li>
+        <strong>{$book['id']}</strong>
+        {$book['tytul']}
+        {$book['imie']}
+        {$book['nazwisko']}
+    </li>";
             }
          ?>
     </ul>
@@ -64,11 +97,27 @@ $books =$result -> fetch_all(1);
             <th>Data oddania</th>
         </tr>
         <!-- skrypt d -->
+        <!-- <tr>
+            <td>[id]</td>
+            <td>[tytul]</td>
+            <td>[nazwisko]</td>
+            <td>[data_oddania]</td>
+        </tr> -->
+        <?php
+            foreach($borrows as $borrow){
+                echo"<tr>
+                        <td>{$borrow['id']}</td>
+                        <td>{$borrow['tytul']}</td>
+                        <td>{$borrow['nazwisko']}</td>
+                        <td>{$borrow['data_oddania']}</td>
+                    </tr>";
+            }
+        ?>
     </table>
 
     <form action="" method="post">
-        <label for="return_date">data oddania</label>
-        <input type="text" name="return_date_f" id="return_date">
+        <label for="return_id">id wypożyczenia</label>
+        <input type="text" name="return_id_f" id="return_id">
         <button>zmień</button>
     </form>
 
