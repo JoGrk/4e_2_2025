@@ -1,0 +1,11 @@
+body{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 'aside main';
+}
+aside{
+    grid-area: aside;
+}
+main{
+    grid-area: main;
+}
