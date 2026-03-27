@@ -2,21 +2,34 @@ const formE = document.querySelector('form')
 const taskE = document.getElementById('task')
 const olE = document.querySelector('ol')
 
-let taskArray = ['uczymy sie js','dopisz jeszcze cos']
+let taskArray = []
+
+if(localStorage.getItem("myTaskArray")){
+    taskArray = JSON.parse(localStorage.getItem("myTaskArray"));    
+}
+else{
+    taskArray = ['uczymy sie js','dopisz jeszcze cos']
+}
+
+writeTask(taskArray)
 
 formE.addEventListener('submit', e=>{
     e.preventDefault()
-    alert(taskE.value)
-
+    taskArray.push(taskE.value)
+    writeOneTask(task.value)
+    localStorage.setItem("myTaskArray", JSON.stringify(taskArray))
 })
 
-writeTask(taskArray )
 function writeTask(taskArray){
     taskArray.forEach(task => {
-        let liE = document.createElement('li')
-        liE.textContent = task
-        olE.appendChild(liE)
+        writeOneTask(task)
     });
+}
+
+function writeOneTask(oneTask){
+    let liE = document.createElement('li')
+    liE.textContent = oneTask
+    olE.appendChild(liE)
 }
 
 
