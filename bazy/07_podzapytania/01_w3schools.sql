@@ -79,3 +79,14 @@ WHERE ProductID IN(
 
 -- 13. Dodaj nowy produkt z kategorii Confections dostarczony przez Exotic Liquid 
 
+INSERT INTO products 
+    (ProductName, SupplierID, CategoryID, Price)
+VALUES
+    (
+        'Grappa',
+        (SELECT SupplierID FROM Suppliers WHERE SupplierName = 'Exotic Liquid'),
+        (SELECT CategoryID FROM Categories WHERE CategoryName = 'Confections'),
+        35
+    );
+
+

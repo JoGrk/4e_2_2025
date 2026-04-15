@@ -3,6 +3,63 @@
     text-align: center;
 }
 
-body{
-    
+.left{
+    width: 72%;
+}
+
+main{
+    display: flex;
+}
+
+.left .first{
+    background-color: #795548;
+    font-size: 170%;
+}
+
+.left .second{
+    height: 400px;
+}
+
+.right section{
+    background-color: #BCAAA4;
+    color: #795548;
+    height: 400px;
+}
+
+.right{
+    width: 28%;
+}
+
+footer{
+    background-color: #795548;
+    color: white;
+    padding: 20px;
+}
+
+table{
+    margin: auto;
+    width: 80%;
+    border:solid 1px #795548 ;
+}
+
+tr:hover{
+    background-color: sienna;
+    color: white;
+}
+
+h4{
+    font-size: 200%;
+}
+
+img{
+    padding: 20px;
+    border-radius: 40px;
+}
+
+a{
+    color: white;
+}
+
+input[type='radio']{
+    margin: 7px;
 }
