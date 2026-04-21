@@ -31,10 +31,10 @@
 <body>
     <form action="" method="post">
         <input type="number" name="min-price" id="min-price"
-        min="0" max="<?php echo $max_price?>">
+        min="0" max="<?php echo $max_price; ?>">
         <label for="min-price">Minimalna cena</label> <br>
         <input type="number" name="max-price" id="max-price"
-         min="0" max="<?= $max_price?>">
+         min="0" max="<?= $max_price ?>">
         <label for="max-price">Maksymalna cena</label> <br>
         <button>Filtruj</button>
     </form>
