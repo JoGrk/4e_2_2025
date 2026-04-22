@@ -85,20 +85,90 @@ WHERE SupplierID IN(
 
 -- 4. Usuń wszystkie produkty z kategorii  o opisie "Cheeses" (Description)  o cenie większej od 50
 
+DELETE 
+FROM products
+WHERE CategoryID IN(
+    SELECT CategoryID
+    FROM Categories
+    WHERE Description='Cheeses' 
+)
+AND price>50;
+
+UPDATE Order_details
+SET ProductID = null
+WHERE ProductID IN(
+    SELECT ProductID
+    FROM products
+        INNER JOIN Categories USING(CategoryID)
+    WHERE Description='Cheeses' AND price>50
+);
+
+
 -- 5. Zwiększ o 10% cenę wszystkich produktów z kategorii o nazwie zaczynającej się na literę C 
+
+UPDATE Products
+SET Price = price*1.1
+WHERE CategoryID IN(
+    SELECT CategoryID
+    FROM Categories
+    WHERE CategoryName LIKE 'C%'
+);
 
 -- 6. Usuwamy wszystkie produkty dostarczane przez dostawców z USA
 
--- 7. Usuń wszystkie zamówienia z Orders złożone przez klientów z Londynu ('London').
+DELETE 
+FROM products
+WHERE SupplierID IN(
+    SELECT SupplierID
+    FROM Suppliers 
+    WHERE Country = 'USA'
+);
 
+UPDATE Order_details
+SET ProductID = null 
+WHERE ProductID IN(
+    SELECT ProductID
+    FROM Products 
+        INNER JOIN Suppliers USING(SupplierID)
+    WHERE Country = 'USA'
+);
+
+-- 7. Usuń wszystkie zamówienia z Orders złożone przez klientów z Londynu ('London').
+DELETE FROM 
+ORDERS 
+WHERE CustomerID IN(
+    SELECT CustomerID
+    FROM customers
+    WHERE city ='london'
+);
+
+UPDATE Order_details
+SET OrderID = null
+WHERE OrderID IN(
+    SELECT OrderID
+    FROM Orders 
+    INNER JOIN customers USING(CustomerID)
+    WHERE city ='london'
+)
  
--- Podzapytania wybierające jedną wartość
--- 1. Podaj wszystkie produkty których cena jest mniejsza niż średnia cena produktu danej kategorii 
+
+-- 8. Podaj wszystkie produkty których cena jest mniejsza niż średnia cena produktu danej kategorii 
+SELECT ProductName, Price
+FROM products p
+WHERE Price<(
+    SELECT ROUND(AVG(price))
+    FROM products 
+    WHERE CategoryID = p.CategoryID
+    
+);
  
--- 2. Dla każdego produktu podaj jego nazwę, cenę, średnią cenę wszystkich produktów oraz różnicę między ceną produktu a średnią ceną wszystkich produktów
+-- 9. Dla każdego produktu podaj jego nazwę, cenę, średnią cenę wszystkich produktów oraz różnicę między ceną produktu a średnią ceną wszystkich produktów
  
  
- 
+SELECT ProductName, price, (SELECT AVG(price) FROM products) AS AVG, price-(SELECT AVG(price) FROM products)
+FROM products
+GROUP BY ProductID;
+
  
  
  
