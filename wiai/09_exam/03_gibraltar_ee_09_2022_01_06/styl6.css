@@ -1,0 +1,64 @@
+body{
+    display: grid;
+    grid-template-areas: 'left right'
+                        'footer footer';
+    grid-template-columns: 30% 70%;
+    font-family: Georgia;
+}
+
+.left{
+    grid-area: left;
+    background-color: maroon;
+    color: white;
+    height: 600px;
+}
+
+.right{
+    grid-area: right;
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    overflow: auto;
+}
+
+footer{
+    grid-area: footer;
+    background-color: dimgray;
+    color: white; 
+}
+
+.right img, .right ul{
+    float: left;
+}
+
+.right p{
+    clear: both;
+}
+
+p{
+    padding: 10px;
+}
+
+img{
+    padding: 10px;
+    border: 1px white solid;
+}
+
+#indigo{
+    background-color: indigo;
+}
+
+#steelblue{
+    background-color: steelblue;
+}
+
+
+#olive{
+    background-color: olive;
+    
+}
+
+
+
+
+

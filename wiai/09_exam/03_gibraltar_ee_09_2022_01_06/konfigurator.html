@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+    <script src="skrypt.js" defer></script>
+</head>
+<body>
+
+    <section class="left">
+        <h1>Konfigurator styli</h1>
+        <p>
+            Podaj kolor tła: <br>
+            <button id="indigo">Indigo</button>
+            <button id="steelblue">SteelBlue</button>
+            <button id="olive">Olive</button>
+        </p> 
+
+        <p>
+            Podaj kolor czcionki <br>
+            <select name="textcolor" id="textcolor">
+                <option value="white">Biały</option>
+                <option value="tan">Tan</option>
+                <option value="bisque">Bisque</option>
+                <option value="plum">Śliwkowy</option>
+            </select>
+        </p>
+        
+        <p>
+            Podaj rozmiar czcionki w procentach, np. 200%
+            <input type="text" name="size" id="size" value="100%">
+        </p>
+        
+        <p>
+            Czy rysunek ma mieć ramkę? <br>
+            <input type="checkbox" name="frame" id="frame" checked>
+            <label for="frame">Rysuj ramkę</label>
+        </p>
+
+        <p>
+            Jaki jest typ punktora listy?<br>
+            <input type="radio" name="list-type" id="disc" value="disc" checked>
+            <label for="disc">dysk</label><br>
+            <input type="radio" name="list-type" id="square" value="square">
+            <label for="square">Kwadrat</label><br>
+            <input type="radio" name="list-type" id="circle" value="circle">
+            <label for="circle">okrąg</label>
+        </p>
+
+    </section>
+
+    <section class="right">
+        <img src="gibraltar.jpg" alt="półwysep gibraltarski">
+
+        <ul>
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <footer>
+        Autor: 00000000 
+    </footer>
+    
+</body>
+</html>
