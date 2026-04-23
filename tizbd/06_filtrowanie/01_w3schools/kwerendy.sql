@@ -17,3 +17,13 @@ WHERE Price BETWEEN 10 AND 50;
 
 SELECT CEIL(MAX(Price))
 FROM Products;
+
+-- Utwórz formularz z listą rozwijąna z nazwami dostawców. Po wybraniu pozycji powinna być wyświetlona lista produktów dostarczanych przez tego dostawcę (lista numerowana z nazwą produktu i ceną
+
+-- id dostawcy i nazwa dostawcy
+SELECT SupplierID, SupplierName
+FROM suppliers;
+-- lista produktów (nazwa i cena) dostarczanych przez dostawcę numer 1
+SELECT  ProductName, Price
+FROM products
+WHERE SupplierID = 1;
