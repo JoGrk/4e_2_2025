@@ -174,17 +174,20 @@ GROUP BY ProductID;
  
 -- ------------------ NIETYPOWE ----------------------------------------------------------------------------
 -- 1. Podaj produkty kupowane przez więcej niż 10 klientów (lub 10 różnych klientów - wsk. utwórz zapytanie wybierające różne wiersze CustomerID, ProductID z tabel Orders i OrdersDetalis i użyj jako podzapytanie w części FROM)
- 
+SELECT DISTINCT ProductID, CustomerID
+FROM orders
+    INNER JOIN Order_details USING(OrderID)
+
+SELECT ProductName, COUNT(*)
+FROM (
+    SELECT DISTINCT ProductID, CustomerID, ProductName
+    FROM orders
+        INNER JOIN Order_details USING(OrderID)
+        INNER JOIN Products USING(ProductID)
+)
+GROUP BY ProductID; 
+
 -- 2. Wybierz nazwy i numery telefonów klientów, którzy kupili więcej niż 3 różne produkty z kategorii .Confections.
  
--- 3. Dla każdego produktu podaj maksymalną liczbę zamówionych jednostek
  
--- 4. Dla każdego produktu podaj jego nazwę kategorii, nazwę produktu, cenę, średnią cenę wszystkich produktów danej kategorii oraz różnicę między ceną produktu a średnią ceną wszystkich produktów danej kategorii.
- 
--- 5. Podaj łączną wartość zamówienia o numerze 1025 (uwzględnij cenę za przesyłkę). 
- 
--- 6. Podaj łączną wartość zamówień każdego zamówienia (uwzględnij cenę za przesyłkę).
- 
--- 7. Podaj produkty kupowane przez więcej niż jednego klienta
- 
--- 8. Podaj produkty kupowane przez więcej niż 20 klientów
+-- 3. Dla każdego produktu podaj jego nazwę kategorii, nazwę produktu, cenę, średnią cenę wszystkich produktów danej kategorii 
