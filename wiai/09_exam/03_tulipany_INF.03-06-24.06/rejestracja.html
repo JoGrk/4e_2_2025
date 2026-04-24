@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="./styl.css">
+    <script src="./skrypt.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Formularz rejestracyjny konferencji <em>Nasze Kwiaty</em> </h1>
+    </header>
+
+    <main>
+        <form action="">
+            <div id="st">
+                <h2>Dane osobowe</h2>
+                <input type="text" name="name" id="name" placeholder="Wpisz imię..." required>
+                <input type="text" name="surname" id="surname" placeholder="Wpisz nazwisko..." required>
+                <button id="btn-st">Następna karta</button>
+            </div>
+            <div id="nd">
+                <h2>Dane osobowe</h2>
+                <input type="email" name="email" id="email" placeholder="Twoj email...">
+                <input type="tel" name="phone" id="phone" placeholder="Twoj numer telefonu...">
+                <button id="btn-nd">Następna karta</button>
+            </div>
+            <div id="rd">
+                <h2>Hasło do logowania</h2>
+                <input type="password" name="password" id="password" placeholder="Podaj hasło" required>
+                <input type="password" name="reppassword" id="reppassword" placeholder="Powtórz hasło" required>
+                <button id="send">Zatwierdź</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <section class="first">
+            <video src="./motyl.mp4" controls>Przeglądarka nie obsługuje tego formatu</video>
+        </section>
+        <section class="second">
+            <h3>Plan konferencji</h3>
+
+            <table>
+                <tr>
+                    <td>9:00 - 12:00</td>
+                    <td>Pielęgnacja roślin</td>
+                </tr>
+                <tr>
+                    <td>13:00 - 15:00</td>
+                    <td>Targi kwiatowe</td>
+                </tr>
+            </table>        
+        </section>
+        <section class="third">
+            <p><a href="https://kwiaty.pl">Internetowa kawiaciarnia</a></p>
+        </section>
+        <section class="fourth">
+            <p>Formularz wykonał: 000000000 </p>
+        </section>
+    </footer>
+</body>
+</html>
