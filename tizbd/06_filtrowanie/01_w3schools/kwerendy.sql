@@ -27,3 +27,16 @@ FROM suppliers;
 SELECT  ProductName, Price
 FROM products
 WHERE SupplierID = 1;
+
+-- Utwórz grupę opcji z nazwami firm spedycyjnych (kurierskich). Po kliknięciu wyświetlone są identyfikatory i daty zamówień obsługiwanych przez te firmy
+
+-- shipperID i shipperName z shippers
+
+SELECT shipperID, shipperName
+FROM shippers;
+
+-- identyfikatory i daty zamówień obsługiwanych przez shipperID 1 
+
+SELECT orderID, orderDate
+FROM orders
+WHERE shipperID=1;
