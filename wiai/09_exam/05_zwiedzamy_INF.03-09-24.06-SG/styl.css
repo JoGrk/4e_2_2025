@@ -1,0 +1,42 @@
+*{
+    font-family: Georgia;
+    color: white;
+}
+
+header, footer{
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+
+main{
+    display: flex;
+}
+
+main section{
+    background-color: lightsalmon;
+    height: 527px;
+}
+
+.left, .right{
+    width: 15%;
+}
+
+.mid{
+    width: 70%;
+}
+
+.miniatures{
+    background-color: maroon;
+    height: 70px;
+}
+
+button{
+    background-color: lightsalmon;
+    color: maroon;
+    border-collapse: collapse;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
