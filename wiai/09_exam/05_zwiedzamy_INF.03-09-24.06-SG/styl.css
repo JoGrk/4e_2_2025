@@ -34,9 +34,37 @@ main section{
 button{
     background-color: lightsalmon;
     color: maroon;
-    border-collapse: collapse;
+    border: none;
     font-size: 400%;
     display: block;
     margin: auto;
     padding-top: 210px;
+}
+
+@keyframes myAnimation{
+    from{padding-left: 50px;}
+    to{padding-left: 0px;}
+}
+
+.miniatures img{
+    animation-name: myAnimation;
+    animation-duration: 4s;
+    height: 70px;
+}
+
+.mid img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+}
+
+@keyframes hoverAnimation{
+    from{transform: scale(100%);}
+    to{transform: scale(120%)}
+}
+
+.mid img:hover{
+    animation-name: hoverAnimation;
+    animation-duration: 5s;
+    transform: scale(120%);
 }
