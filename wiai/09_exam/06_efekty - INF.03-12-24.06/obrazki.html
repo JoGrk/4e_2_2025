@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <script src="skrypt.js" defer></script>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+
+    <main>
+        <section class="first">
+            <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku"><br>
+            <input type="radio" name="imgEffect1" id="blur">
+            <label for="blur">Blur</label> <br>
+            <input type="radio" name="imgEffect1" id="sepia">
+            <label for="sepia">Sepia</label>
+            <input type="radio" name="imgEffect1" id="negative">
+            <label for="negative">Negatyw</label><br>
+            <button>Zastosuj</button>
+        </section>
+
+        <section class="second">
+            <img src="pomarancza.jpg" alt="drzewo pomarańczy"><br>
+            <button id="colour">kolorowy</button>
+            <button id="b-w">Czarno-biały</button>
+        </section>
+
+        <section class="third">
+            <img src="owoce.jpg" alt="kosz pelen owocow"><br>
+            <input type="range" name="imgEffect3" id="imgEffect3" min="0" max="100" value="100"><br>
+            <button>Zastosuj</button>
+        </section>
+
+        <section class="fourth">
+            <img src="zolw.jpg" alt="zolw w wodzie"><br>
+            <input type="range" name="imgEffect4" id="imgEffect4" min="0" max="250"><br>
+            <button>Zastosuj</button>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a></p>
+
+        <p>Stronę wykonał: 000000000000</p>
+    </footer>
+</body>
+</html>

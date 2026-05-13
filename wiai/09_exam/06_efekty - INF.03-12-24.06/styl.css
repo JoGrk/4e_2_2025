@@ -1,0 +1,61 @@
+*{
+    font-family: 'Century', serif;
+    text-align: center;
+}
+
+header, footer{
+    background-color: indigo;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 'first second'
+                            'third fourth';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 470px;
+}
+
+.first{
+    grid-area: first;
+}
+
+.second{
+    grid-area: second;
+}
+
+.third{
+    grid-area: third;
+}
+
+.fourth{
+    grid-area: fourth;
+}
+
+img{
+    padding: 3px;
+    margin: 10px;
+    border: 2px dashed slateblue;
+}
+
+a{
+    color: white;
+}
+
+button{
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color:indigo;
+}
+
+input[type="range"]{
+    width: 80%;
+}
