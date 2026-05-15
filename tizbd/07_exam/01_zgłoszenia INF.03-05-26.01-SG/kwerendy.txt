@@ -1,0 +1,15 @@
+SELECT id,imie,nazwisko
+FROM personel
+WHERE status = 'policjant';
+
+
+SELECT typ, COUNT(*)
+FROM Pojazdy
+GROUP BY typ;
+
+SELECT id, nazwisko
+FROM personel
+WHERE id NOT IN(
+    SELECT id_personel
+    FROM rejestr
+);
