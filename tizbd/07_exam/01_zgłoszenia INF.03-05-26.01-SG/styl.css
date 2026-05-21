@@ -32,3 +32,27 @@ h1, h2, h3{
 table, td{
     border: solid 1px maroon;
 }
+
+ table{
+    width: 85%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+ol{
+    list-style: none;
+}
+
+button{
+    background-color: maroon;
+    color: white;
+    margin-left: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+button:hover{
+    background-color: white;
+    color: maroon;
+}
