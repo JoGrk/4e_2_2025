@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylizacja Paznokci</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <aside>
+        <img src="manicure.jpg" alt="Stylizacja paznokci">
+    </aside>
+
+    <main>
+        <header>
+            <h1>Twoje wymarzone paznokcie</h1>
+        </header>
+        <nav>
+            <button id="btnColor">Kolor</button>
+            <button id="btnShape">Kształt</button>
+            <button id="btnPattern">Wzór</button>
+        </nav>
+        <section class="one">
+            <h2>Kolor</h2>
+            <img src="kolory.png" alt="Kolory paznokcie">
+            <input type="color" name="nailColor" id="nailColor" value="#FF0000" >
+
+        </section>
+        <section class="two">
+            <h2>Kształt</h2>
+            <img src="ksztalt.png" alt="kształty paznokci">
+            <select name="nail-shape" id="nail-shape">
+                <option value="almond">Migdał</option>
+                <option value="rounded">Zaokrąglony</option>
+                <option value="squared">Kwadratowy</option>
+                <option value="ballerina">Balerina</option>
+                <option value="rounded-square">Zaokrąglony kwadrat</option>
+            </select>
+        </section>
+        <section class="three">
+            <h2>Wzór</h2>
+            <!-- Skrypt 1 -->
+            <input type="number" name="pattern" id="pattern" min="1" max="10">
+        </section>
+    </main>
+
+    <footer><p><em>Autor strony: 000000000000</em></p></footer>
+</body>
+</html>

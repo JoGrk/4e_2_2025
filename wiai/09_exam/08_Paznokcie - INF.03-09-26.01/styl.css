@@ -1,0 +1,53 @@
+*{
+    font-family: 'Trebuchet MS',sans-serif;
+}
+body{
+    background-color: blanchedalmond;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 'aside main'
+                        'aside footer';
+    grid-template-columns: 20% 80%;
+}
+aside{
+    grid-area: aside;
+}
+
+aside img{
+    width: 100%;
+}
+
+main{
+    grid-area: main;
+    width: 80%;
+}
+
+nav{
+    text-align: left;
+    margin-left: 10%;
+}
+
+section{
+    background-color: salmon;
+    margin-left: 10%;
+    padding: 10px;
+    height: 250px;
+}
+
+.one{
+    display: block;
+}
+
+.two, .three{
+    display: none;
+}
+
+button{
+    width: 26%;
+    color: white;
+    border: none;
+}
+
+footer{
+    grid-area: footer;
+}
