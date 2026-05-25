@@ -30,14 +30,16 @@
            echo"<p>Dziękujemy za przesłanie danych. Podsumowanie: imię $name_f, wiek $age_f, status $status_f</p>"; 
             
            if($terms_f ){
-            echo"Zaakceptowałeś regulamin";
+            echo'<p>Zaakceptowałeś regulamin</p>
+                 <a href="logowanie.php">Logowanie</a>';
            }
            else{
-            echo"<style>Proszę zaakceptować regulamin";
+            echo"<p style='color: red;'>Proszę zaakceptować regulamin</p>";
            }
         }
         
     ?>
+
     
 </body>
 </html>
