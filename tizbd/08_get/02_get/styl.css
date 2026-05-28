@@ -1,0 +1,18 @@
+body{
+    display: grid;
+    grid-template-areas: 'aside main';
+    grid-template-columns: 40% auto;
+}
+
+aside{
+   grid-area: aside; 
+}
+
+table,td{
+    border: black solid 1px;
+    border-collapse: collapse;
+}
+
+main{
+    grid-area: main;
+}
