@@ -1,0 +1,60 @@
+*{
+    font-family: Garamond, Serif;
+}
+
+header, footer{
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 3px;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 'nav sec aside';
+    grid-template-rows: 500px;
+    grid-template-columns: 35% 30% 35%;
+}
+
+nav{
+    grid-area: nav;
+}
+
+section{
+    grid-area: sec;
+    background-color: skyblue;
+    text-align: center;
+}
+
+aside{
+    grid-area: aside;
+}
+
+nav, aside{
+    background-color: dodgerblue;
+}
+
+input, button{
+    margin: 10px;
+}
+
+h3{
+    text-align: center;
+}
+
+
+h3::first-letter{
+    font-size: 200%;
+}
+
+p{
+    font-size: 150%;
+}
+
+.selShape{
+    box-shadow: 5px 5px 10px dimgray;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
