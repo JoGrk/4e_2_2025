@@ -91,14 +91,59 @@ FROM marvel_avengers
 GROUP BY platform;
 
 -- 8 
-
 -- Wyświetl:
-
 -- platformę
 -- łączną sumę zaangażowanych followersów (wskaźnik engagement_rate co najmniej 8.0) 
 -- (high_engagement_followers_sum)
 --  i mniej zaangażowanych (low_engagement_followers_sum)
 -- dane pogrupuj według platformy
+
+SELECT platform,
+    SUM(
+        CASE
+            WHEN engagement_rate >= 8.0 THEN followers
+            ELSE NULL 
+        END 
+    )AS high_engagement_followers_sum,
+    SUM(
+        CASE
+            WHEN engagement_rate<8.0 THEN followers
+            ELSE NULL
+        END
+    ) AS low_engagement_followers_sum
+FROM marvel_avengers
+GROUP BY platform;
+
 -- 9. Wyświetl łączną liczbę zamówień z podziałem na zamówienia dokonane z laptopa oraz z urządzeń mobilnych (łącznie z tabletu i telefonu (laptop_order, mobile_orders)
 
+SELECT
+    COUNT(CASE
+            WHEN product_type = 'laptop' THEN 1 
+            ELSE NULL
+        END)AS laptop_order,
+    COUNT(
+        CASE
+            WHEN product_type IN('phone', 'tablet') THEN 1
+            ELSE NULL
+        END
+    )AS mobile_orders
+FROM product_orders;
+
+
 -- 10. Oblicza średnią liczbę followersów bazują na wskaźniku zaangażowania . Jeśli wskaźnik wynosi co najmniej 8.0, przypisz followersa do high_engagement_followers, w przeciwnym wypadku do low_engagement_followers. Dane pogrupuj według platformy.  Wsk. jeśli jest wartość nie spełnia warunku, zwróć null - ta wartość nie jest uwzględniana w obliczenia.
+
+SELECT platform,
+    ROUND(AVG(
+        CASE
+            WHEN engagement_rate >= 8.0 THEN followers
+            ELSE NULL
+        END 
+    ),1) AS avg_high,
+    ROUND(AVG(
+        CASE
+            WHEN engagement_rate < 8.0 THEN followers
+            ELSE NULL
+        END
+    ),1)AS avg_low
+FROM marvel_avengers
+GROUP BY platform;
