@@ -1,0 +1,63 @@
+*{
+    font-family: Verdana, serif;
+    text-align: center;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 'header header'
+                         'left right'
+                         'footer footer';
+    grid-template-columns: 30% 70%;
+}
+header{
+    grid-area: header;
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+.left{
+    background-color: palegreen;
+    height: 500px;
+    grid-area: left;
+}
+
+.right{
+    background-color: honeydew;
+    height: 500px;
+    padding-top: 100px;
+    grid-area: right;
+}
+
+footer{
+    grid-area: footer;
+    background-color: palegreen;
+    padding: 3px;
+}
+
+table, td{
+    border: 1px darkgreen solid;
+    border-collapse: collapse;
+}
+
+table{
+    margin: auto;
+    width: 95%;
+}
+
+td, th{
+    padding: 20px 0px;
+}
+
+button{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: honeydew;
+    color: darkgreen;
+}
+
