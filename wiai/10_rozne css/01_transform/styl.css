@@ -1,0 +1,29 @@
+nav{
+    background-color: aqua;
+    height: 20vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a{
+    display: inline-block;
+    background-color: whitesmoke;
+    color: rgb(9, 128, 84);
+    text-decoration: none;
+    width: 5rem;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+nav a:last-child{
+    margin-right: 1rem;
+}
+
+nav a:hover{
+    transition: all 0.5s ease;
+    transform: translateY(-20px);
+    transform: scale(1.3);
+}
+
